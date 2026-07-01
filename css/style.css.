@@ -1,16 +1,154 @@
-.nav-links.active{
-    display:flex;
-    flex-direction:column;
-    position:absolute;
-    top:80px;
-    left:0;
-    width:100%;
-    background:#ffffff;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 10px 20px rgba(0,0,0,.1);
+/* Google Font */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-.nav-links.active li{
-    margin:15px 0;
+body{
+    background:#fff8fb;
+    color:#333;
+    line-height:1.6;
+}
+
+/* Navigation */
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:#ffffff;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+}
+
+.logo h2{
+    color:#e91e63;
+    font-size:28px;
+    font-weight:700;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#e91e63;
+}
+
+.join-btn{
+    background:#e91e63;
+    color:#fff !important;
+    padding:10px 20px;
+    border-radius:30px;
+}
+
+.join-btn:hover{
+    background:#c2185b;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* Hero Section */
+
+.hero{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+    background:linear-gradient(rgba(233,30,99,.75),rgba(233,30,99,.75)),
+    url('../images/hero.jpg') center/cover;
+}
+
+.hero-content{
+    max-width:750px;
+    color:#fff;
+}
+
+.hero h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-primary,
+.btn-secondary{
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:40px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#fff;
+    color:#e91e63;
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+}
+
+.btn-secondary{
+    border:2px solid #fff;
+    color:#fff;
+}
+
+.btn-secondary:hover{
+    background:#fff;
+    color:#e91e63;
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.nav-links{
+    display:none;
+}
+
+.menu-btn{
+    display:block;
+}
+
+.hero h1{
+    font-size:38px;
+}
+
+.hero p{
+    font-size:18px;
+}
+
 }
